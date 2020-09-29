@@ -9,12 +9,14 @@ import { SideBarComponent } from './sidebar/side-bar.component';
 import { MarkdownRendererComponent } from './markdown-renderer/markdown-renderer.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient } from '@angular/common/http';
+import { DummyEditorComponent } from './dummy-editor/dummy-editor.component';
 
 const comps = [
   NavbarComponent,
   SideBarComponent,
   FooterComponent,
   MarkdownRendererComponent,
+  DummyEditorComponent,
 ];
 
 @NgModule({

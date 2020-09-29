@@ -17,3 +17,8 @@ export const getSideNavPosition = createSelector(
   getAppState,
   (state: AppState) => state.sideNav.Position
 );
+
+export const getEditorVisible = createSelector(
+  getAppState,
+  (state: AppState) => state.editorVisible
+);

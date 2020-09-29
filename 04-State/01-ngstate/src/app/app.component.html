@@ -9,7 +9,10 @@
   [ngClass]="selectedTheme"
 >
   <div gdArea="navbar" class="navbar"><app-navbar></app-navbar></div>
-  <div gdArea="main" class="main"><router-outlet></router-outlet></div>
+  <div gdArea="main" class="main">
+    <router-outlet></router-outlet>
+    <app-dummy-editor *ngIf="editorVisible | async"></app-dummy-editor>
+  </div>
   <div gdArea="sidebar" fxHide.lt-md class="footer">
     <app-side-bar></app-side-bar>
   </div>

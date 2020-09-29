@@ -5,11 +5,13 @@ export const appFeatureKey = 'app';
 export interface AppState {
   title: string;
   sideNav: { Enabled: boolean; Visible: boolean; Position: string };
+  editorVisible: boolean;
 }
 
 export const initialAppState: AppState = {
   title: 'Advanced Angular Development',
   sideNav: { Enabled: true, Visible: true, Position: 'over' },
+  editorVisible: false,
 };
 
 export function AppReducer(
@@ -17,6 +19,8 @@ export function AppReducer(
   action: AppActions
 ) {
   switch (action.type) {
+    case AppActionTypes.ToggleEditor:
+      return { ...state, editorVisible: !state.editorVisible };
     case AppActionTypes.ChangeTitle:
       return { ...state, title: action.payload };
     case AppActionTypes.SetSideNavEnabled:

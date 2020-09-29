@@ -6,11 +6,16 @@ export enum AppActionTypes {
   ToggleSideNavVisible = '[App] ToggleSideNavVisible',
   ChangeSideNavVisible = '[App] ChangeSideNavVisible',
   ChangeSideNavPosition = '[App] ChangeSideNavPosition',
+  ToggleEditor = '[App] ToggleEditor',
 }
 
 export class ChangeTitleAction implements Action {
   readonly type = AppActionTypes.ChangeTitle;
   constructor(public payload: string) {}
+}
+
+export class ToggleEditorAction implements Action {
+  readonly type = AppActionTypes.ToggleEditor;
 }
 
 export class ToggleSideNavVisible implements Action {
@@ -37,4 +42,5 @@ export type AppActions =
   | ToggleSideNavVisible
   | ChangeSideNavPosition
   | ChangeSideNavVisible
-  | SetSideNavEnabled;
+  | SetSideNavEnabled
+  | ToggleEditorAction;
