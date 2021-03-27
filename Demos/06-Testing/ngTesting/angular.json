@@ -70,7 +70,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -93,9 +92,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "ng-demo-app:build",
-            "ssl": true,
-            "sslKey": "/ssl/server.key",
-            "sslCert": "/ssl/server.crt"
+            "ssl": false
           },
           "configurations": {
             "production": {
